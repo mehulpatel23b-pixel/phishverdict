@@ -1,0 +1,11 @@
+# examples/urls.txt -- mixed corpus: benign, suspicious, and phishing-shaped
+# run: phishverdict examples/urls.txt
+https://accounts.google.com/signin
+https://github.com/mehulpatel23b-pixel/phishverdict
+https://docs.python.org/3/library/urllib.parse.html
+http://paypal.com.verify-login.xyz/webscr?cmd=_login-run
+http://paypa1-secure.com/webscr
+https://bit.ly/4kRiley
+http://xn--80ak6aa92e.com/appleid.verify/
+http://192.168.4.22/bank/update
+javascript:alert(document.cookie)

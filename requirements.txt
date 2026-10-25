@@ -1,0 +1,2 @@
+# phishverdict has ZERO runtime dependencies.
+# Python 3.9+ standard library only.

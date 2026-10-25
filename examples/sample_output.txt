@@ -1,0 +1,52 @@
+────────────────────────────────────────────────────────────────
+URL      : https://accounts.google.com/signin
+host     : accounts.google.com   (registrable: google.com)
+VERDICT  : CLEAN
+  [ok] no triage signals raised
+────────────────────────────────────────────────────────────────
+URL      : https://github.com/mehulpatel23b-pixel/phishverdict
+host     : github.com   (registrable: github.com)
+VERDICT  : CLEAN
+  [ok] no triage signals raised
+────────────────────────────────────────────────────────────────
+URL      : https://docs.python.org/3/library/urllib.parse.html
+host     : docs.python.org   (registrable: python.org)
+VERDICT  : CLEAN
+  [ok] no triage signals raised
+────────────────────────────────────────────────────────────────
+URL      : http://paypal.com.verify-login.xyz/webscr?cmd=_login-run
+host     : paypal.com.verify-login.xyz   (registrable: verify-login.xyz)
+VERDICT  : CRITICAL 52
+  [!] brand_impersonation (30) Brand token 'paypal': 'paypal' appears in the subdomain chain, but the registrable domain is 'verify-login.xyz' (official: paypal.com)
+  [!] risky_tld (12) High-risk TLD .xyz: registrable domain is 'verify-login.xyz'
+  [!] login_keyword (10) Login-themed hostname: tokens: login, verify
+────────────────────────────────────────────────────────────────
+URL      : http://paypa1-secure.com/webscr
+host     : paypa1-secure.com   (registrable: paypa1-secure.com)
+VERDICT  : SUSPICIOUS 45
+  [!] brand_lookalike (35) Lookalike of 'paypal': registrable domain 'paypa1-secure.com' imitates a leet/typosquat of paypal.com
+  [!] login_keyword (10) Login-themed hostname: tokens: secure
+────────────────────────────────────────────────────────────────
+URL      : https://bit.ly/4kRiley
+host     : bit.ly   (registrable: bit.ly)
+VERDICT  : LOW 15
+  [!] url_shortener (15) URL shortener: 'bit.ly' hides the real destination
+────────────────────────────────────────────────────────────────
+URL      : http://xn--80ak6aa92e.com/appleid.verify/
+host     : xn--80ak6aa92e.com   (registrable: xn--80ak6aa92e.com)
+VERDICT  : SUSPICIOUS 40
+  [!] idn_homoglyph (40) Punycode/IDN host: decodes to 'аррӏе.com'
+────────────────────────────────────────────────────────────────
+URL      : http://192.168.4.22/bank/update
+host     : 192.168.4.22   (registrable: 192.168.4.22)
+VERDICT  : SUSPICIOUS 35
+  [!] ip_literal_host (35) Raw IP host: host is an IP literal family: 192.168.4.22
+────────────────────────────────────────────────────────────────
+URL      : javascript:alert(document.cookie)
+host     : -
+VERDICT  : CRITICAL 60
+  [!] dangerous_scheme (60) Dangerous scheme: scheme 'javascript:' can execute in a browser
+────────────────────────────────────────────────────────────────
+summary  : CLEAN:3  LOW:1  SUSPICIOUS:3  CRITICAL:2
+exit      : flagged
+phishverdict is a heuristic triage aid, not a verdict. Use it defensively, on URLs you are authorized to analyze.

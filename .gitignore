@@ -1,0 +1,40 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# --- tooling ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+htmlcov/
+
+# --- NEVER commit suspicious evidence you are analyzing ---
+*.eml
+*.msg
+*.pst
+evidence/
+inbox/
+urls-live.txt
+*.pcap
+*.pcapng
+
+# --- secrets ---
+.env
+.env.*
+*.pem
+*.key
+credentials*
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
